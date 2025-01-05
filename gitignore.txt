@@ -1,0 +1,17 @@
+# Ignore PHP composer dependencies
+/vendor/
+
+# Ignore PHP composer lock file
+/composer.lock
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore system files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore IDE config files (Visual Studio, JetBrains)
+.idea/
+.vscode/
