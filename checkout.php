@@ -1,6 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mendekode data checkout yang diterima dalam format JSON
+    // Pseudocode 1: Memeriksa apakah data checkout dikirim melalui POST dan mendekode data JSON
+    // Jika metode request adalah POST, ambil data checkout dalam format JSON
+    // Dekode data JSON menjadi array PHP
     $checkoutData = json_decode($_POST['checkoutData'], true);
     
     if ($checkoutData) {
@@ -10,7 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $totalPrice = $checkoutData['totalPrice'];
         $items = $checkoutData['items'];
         
-        // Penerapan percabangan untuk memeriksa apakah hanya ada satu item
+        // Pseudocode 2: Memeriksa jumlah item dan menggabungkan tipe dan ukuran yang unik
+        // Jika hanya ada satu item, ambil tipe dan ukuran dari item tersebut
+        // Jika ada lebih dari satu item, gabungkan tipe dan ukuran yang unik
         if (count($items) === 1) {
             // Jika hanya ada satu item, ambil type dan size dari item tersebut
             $item = $items[0];
